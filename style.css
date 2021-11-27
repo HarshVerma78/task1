@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 200vh;
+}
+.head{
+    height: 10vh;
+    background-color: black;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    height: 12vh;
+}
+
+
+
+#search{
+    border: 1px solid rgb(192, 189, 189);
+    border-style:initial;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0.5vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+
+    
+}
+
+#search-input{
+    border: none;
+    width: 80%;
+    background-color: transparent;
+}
+
+.nav{
+    width: 50%;
+    align-items: baseline;
+
+}
+.nav li{
+    margin-right: 3vh;
+}
+.nav li a{
+  color: black;
+}
+
+.nav-icon{
+    margin-left: 5%;
+}
+
+.nav-icon img{
+    margin-left: 3vh;
+}
+.btn{
+    margin-left: 3vh;
+    border-radius: 20px;
+}
+
+
+/* doropdowns */
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    border-top: 3px solid red;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    margin-top: 0.5vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation: dropmove 0.2s linear;
+
+   
+    
+  }
+
+  @keyframes dropmove {
+      from {
+          margin-top: 3vh;
+
+      }
+      to{
+          margin-top: 1vh;
+      }
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+   
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;
+   }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: transparent;}
+
+
+/* main section css */
+
+.section-main{
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    padding: 3vh;
+}
+
+
+.left{
+    width: 40%;
+    background-color: blanchedalmond;
+    height: 100%;
+    margin: auto;
+    padding: 6vh;
+}
+
+.right{
+    width: 40%;
+    background-color: rgb(235, 235, 235);
+    height: 100%;
+    margin: auto;
+    padding: 6vh;
+}
+
+
+.sright{
+    width: 40%;
+    background-color: rgb(235, 235, 235);
+    height: 100%;
+    margin: auto;
+    padding: 6vh;
+}
+.left{
+    justify-content: center;
+    text-align: center;
+    padding: auto;
+    margin: auto;
+    background: linear-gradient(rgb(128, 126, 126) , white);
+}
+
+.text , #pass, .loginbtn{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(158, 154, 154);
+    padding: 3vh;
+    margin: 1vh;
+    width: 100%;
+    color: black;
+}
+
+
+
+@media screen and (max-width:660px) {
+    .section-main{
+        flex-direction: column;
+    }
+
+    .right,.sright,.left{
+        width: 80%;
+        height: 150%;
+    }
+}
