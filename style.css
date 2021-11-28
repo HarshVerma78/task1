@@ -568,6 +568,11 @@ animation: moveicons 0.3s linear;
     .timer{
         height: 132vh;
     }
+    
+    .icons{
+    width:31vw;
+       
+    }
 }
 @media screen and (max-width:660px) {
    
