@@ -226,7 +226,7 @@
     border-bottom: 2px solid reds;
 }
 
-.item1 {background-image: url(./img/item1.jpg);}
+.item1 {background-image: url(/task1/tree/img/item1.jpg);}
 .item2{background-image: url(./img/item2.jpg);}
 .item3{background-image: url(./img/item3.jpg);}
 .item4{background-image: url(./img/item4.jpg);}
