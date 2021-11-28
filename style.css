@@ -541,6 +541,7 @@ animation: moveicons 0.3s linear;
     .icons{
         width:31vw;
 }
+}
 @media screen and (max-width:480px) {
     .timer{
         display: flex;
