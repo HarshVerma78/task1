@@ -4,15 +4,91 @@
 }
 
 .head{
-    height: 10vh;
-    background-color: black;
-}
-
-.navbar{
     position: sticky;
     top: 0;
     z-index: 1;
+    height: 6vh;
+    background-color: black;
+}
+
+.action
+{
+    position: absolute;
+    top:10px;
+    right:10px;
+}
+
+.action li
+{  
+   border-radius: 20px;
+   position: relative;
+   list-style: none;
+   width: 40px;
+   height: 40px;
+   background: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin:4px;
+   cursor:pointer;
+   visibility: hidden;
+   transition: transform 0.5s;
+   transform: translateX(25px);
+}
+.action li:nth-child(2){
+    transition-delay:0.15s ;
+}
+.action li:nth-child(3){
+    transition-delay:0.3s ;
+}
+.card:hover .action li{
+    visibility: visible;
+    transform: translateX(0px);
+}
+
+.action li span{
+    position: absolute;
+    right: 50px;
+    top:20px;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    padding: 4px 6px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+.action li:hover{
+ background: rgb(129, 218, 173);
+}
+
+.action li:hover span{
+    transform: translateY(-50%) translateX(0px);
+    opacity: 1;
+}
+.action li span::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: red;
+    transform: translateY(-50%) rotate(45deg);
+
+}
+
+
+.action li span
+
+.navbar{
+    z-index: 1;
     height: 12vh;
+    background: linear-gradient(rgb(34, 32, 32),rgb(113, 113, 114),rgb(243, 243, 250));
 }
 
 .navbar-nav{
@@ -23,42 +99,71 @@
     border: 1px solid rgb(192, 189, 189);
     border-style:initial;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 0.5vh;
     padding-left: 1vh;
-    padding-right: 1vh;
-
-    
+    padding-right: 0.1vh;
+    width: 65%;
+}
+.modal-content{
+    border: none;
+    background: transparent;
 }
 
 
+#search > img {
+ margin: 0.1%;   
+}
 
 #search-input{
     border: none;
-    width: 80%;
+    border-color: white;
+    width: 95%;
+    border-radius: 40px;
     background-color: transparent;
 }
 
+.head{
+    align-items: center;
+    justify-content: center;
+}
 .nav{
-    width: 50%;
-    align-items: baseline;
+    width: 70%;
+    margin:auto;
     z-index: 1;
 
 }
+.nav-item{
+    height: 100%;
+}
+.nav-link{
+    padding: 0;
+    height: 100%;
+}
 .nav li{
-    margin-right: 3vh;
+   padding: 1vh;
+    width: 20%;
+    border-left: 1px solid rgb(82, 80, 80);
+    border-right: 1px solid rgb(82, 80, 80);
 }
 .nav li a{
-  color: black;
+    text-decoration: none;
+    color:white;
+    height:100%;
+
+}
+.nav-item:hover{
+    background-color: rgb(132, 206, 132);
 }
 
 .nav-icon{
     margin-left: 5%;
 }
-
-.nav-icon img{
-    margin-left: 3vh;
+.nav-icon i{
+    cursor: pointer;
+    margin-right: 2vh;
 }
+
 .btn{
     margin-left: 3vh;
     border-radius: 20px;
@@ -86,7 +191,7 @@
     display: none;
     border-top: 3px solid red;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #0a0a0a;
     min-width: 160px;
     margin-top: 0.5vh;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -120,7 +225,7 @@
   .dropdown-content a:hover {background-color: #ddd;}
   
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;
+  .nav-item:hover .dropdown-content {display: block;
    }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -146,7 +251,7 @@
 }
 
 .right{
-    width: 40%;
+    width: 100%;
     background-color: rgb(235, 235, 235);
     height: 100%;
     margin: auto;
@@ -155,7 +260,7 @@
 
 
 .sright{
-    width: 40%;
+    width: 100%;
     background-color: rgb(235, 235, 235);
     height: 100%;
     margin: auto;
@@ -289,10 +394,10 @@
     cursor: pointer;
 }
 
-.card:hover .icons{
+/* .card:hover .icons{
     visibility: visible;
 animation: moveicons 0.3s linear;
-}
+} */
 
 
 .details{
@@ -441,10 +546,17 @@ animation: moveicons 0.3s linear;
 
 .foot{
     height: 50vh;
+    align-items: center;
+    text-align: center;
 }
 
 .foot > div{
     width:25%;
+    align-items: center;
+    justify-content: center;
+}
+.payops{
+    
 }
 
 .payops img{
@@ -452,6 +564,8 @@ animation: moveicons 0.3s linear;
     border-radius: 50px;
     width: 40px;
     height: 40px;
+    margin: auto;
+    
 }
 
 .logos  > img{
@@ -466,8 +580,31 @@ animation: moveicons 0.3s linear;
     
 }
 
+.item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.item{
+    border: 1px solid rgba(214, 214, 214, 0.5);
+    margin: 2vh;
+}
+.qty{
+    margin: 2vh;
+}
+.qty button{
+   height: 4vh;
+   width: 4vh;
+   padding: 0.5%;
+   background-color: rgb(151, 151, 150);
+   border-radius: 5px;
+   border: 1px solid black;
 
-
+}
+.qty input{
+    width: 3vw;
+    border-radius: 10px;
+}
 @media screen and (max-width:600px) {
     .posters{
         height: 250vh;
@@ -538,9 +675,6 @@ animation: moveicons 0.3s linear;
 .ad{
     height: 195vh;
 }
-    .icons{
-        width:31vw;
-}
 }
 @media screen and (max-width:480px) {
     .timer{
@@ -568,10 +702,12 @@ animation: moveicons 0.3s linear;
     .timer{
         height: 132vh;
     }
-    
-    .icons{
-    width:31vw;
-       
+    .nav{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav > li{
+        width: 25%;
     }
 }
 @media screen and (max-width:660px) {
@@ -604,3 +740,7 @@ animation: moveicons 0.3s linear;
         height: 340vh;
     }
 }
+
+
+
+
