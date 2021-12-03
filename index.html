@@ -34,19 +34,69 @@
 
               <div class="nav-icon">
                   <i class="fa fa-heart fa-lg" aria-hidden="true" style="color: white;"></i>
- <i class="fa fa-shopping-cart fa-lg position-relative" aria-hidden="true" style="color: white;">
+                  <i data-bs-toggle="modal" data-bs-target="#exampleModalcart" class="fa fa-shopping-cart fa-lg position-relative" aria-hidden="true" style="color: white;">
 
                   <span class="position-absolute top-0 start-10 translate-middle badge rounded-pill bg-success" style="width: 20px; height: 20px; font-size: 12px;">
                     2
                     
                   </span>
-                </i>                   <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
-
+                </i>
+                  <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
                 </div>
             </div>
 
         </div>
       </nav>
+
+
+      <!-- cart modal -->
+
+
+
+<!-- cart Modal -->
+<div class="modal fade" id="exampleModalcart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        
+        <div class="right">
+            
+            <div class="form">
+              <div class="caritems container">
+                <h4>-- Your Shopping Cart -- </h4>
+                <div class="item ">
+                  <div class="pcrd">
+                      <img class="pcrdimg" src="./img/mensf.jpg" alt="">
+                      <div class="details">
+                       <h6>Mens Shirt</h6>
+                       <div class="star"></div>
+                       <p>$1.22</p>
+                      </div>
+                      <div class="qty">
+                        <div class="d-flex">
+                            <button class="minus">-</button>
+                            <input type="text" id="qty" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+            <button type="button" class="btn btn-primary">Checkout</button>
+          </div>
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 
       <!--login Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -129,7 +179,7 @@
             </div></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Contact</a>
+            <a class="nav-link">Contact Us</a>
           </li>
         </ul>
       </header>
@@ -430,6 +480,35 @@
 
 
 <script>
+
+
+var quantity= document.getElementById("qty").value
+console.log(quantity)
+var plusbutton = document.getElementsByClassName("plus")
+var au = 1;
+if (quantity >= "0") {
+    
+    $(".plus").click(function(){
+      console.log("plus clicked")
+        au += 1
+        $("#qty").attr("value",au)
+    })
+    
+    $(".minus").click(function(){
+      console.log("plus clicked")
+        if (au > 0) {
+            
+            au -= 1
+            $("#qty").attr("value",au)
+        }
+    })
+}
+
+else{
+    console.log("qty cant be negative")
+}
+
+
 var prodarray = [];
 
 for (let k = 0; k < 8; k++) 
@@ -543,6 +622,23 @@ $(".c").addClass("col-md-3")
 //     $(".m").css("display","none");
 // })
 
+
+$(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
 
 
 
