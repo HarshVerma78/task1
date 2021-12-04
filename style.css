@@ -167,7 +167,7 @@ vertical-align: middle;
 .nav li{
    padding: 1vh;
     width: 20%;
-    
+
 }
 .nav li a{
     text-decoration: none;
@@ -642,6 +642,7 @@ animation: moveicons 0.3s linear;
         width: 50%;
     } */
     .row>* {
+        text-align: center;
         width: 50%;
     }
     
@@ -667,6 +668,8 @@ animation: moveicons 0.3s linear;
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-bottom: 5vh;
+
     }
     .subs > input{
         width: 65vw;
@@ -729,6 +732,9 @@ animation: moveicons 0.3s linear;
     }
     .nav > li{
         width: 25%;
+    }
+    .carousel-inner{
+        height: 83%;
     }
 }
 @media screen and (max-width:660px) {
