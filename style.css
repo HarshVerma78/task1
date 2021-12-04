@@ -167,8 +167,7 @@ vertical-align: middle;
 .nav li{
    padding: 1vh;
     width: 20%;
-    border-left: 1px solid rgb(82, 80, 80);
-    border-right: 1px solid rgb(82, 80, 80);
+    
 }
 .nav li a{
     text-decoration: none;
