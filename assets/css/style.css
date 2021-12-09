@@ -576,7 +576,7 @@ animation: moveicons 0.3s linear;
 .payops img{
     object-fit: cover;
     margin: 2vh;
-    border-radius: 50px;
+    border-radius: 20px;
     width: 70px;
     height: 70px;
     margin: auto;
