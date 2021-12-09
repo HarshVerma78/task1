@@ -477,9 +477,9 @@ animation: moveicons 0.3s linear;
 }
 
 .Trend-bestSeller-Featured-Card-image{
-    height: 20vh;
-    width: 20vh;
-    object-fit: contain;
+        object-fit: contain;
+        width: 50%;
+    
     margin-right: 2vh;
 }
 
