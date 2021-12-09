@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+.checked {
+
+  color: rgb(226, 152, 13);
+}
+#star img{
+  width: 20px;
+  height: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>Star Rating</h2>
+
+<div id="star"></div>
+
+
+<script>
+  // we can set n to get the desired rating
+var n = 3;
+var star = document.getElementById("star");
+for (let i = 0; i < n; i++) {
+  star.innerHTML += `<span class="checked"><img src="star.png"></span> ` ;
+}
+</script>
+
+</body>
+</html>

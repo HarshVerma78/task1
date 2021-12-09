@@ -1,0 +1,892 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.head{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 6vh;
+    background-color: black;
+}
+
+.action
+{
+    position: absolute;
+    top:10px;
+    right:65px;
+    /* visibility: hidden; */
+}
+span {cursor:pointer; }
+.number{
+    margin:100px;
+}
+
+.action li
+{  
+   border-radius: 20px;
+   position: relative;
+   list-style: none;
+   width: 40px;
+   height: 40px;
+   background: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin:4px;
+   cursor:pointer;
+   visibility: hidden;
+   transition: transform 0.5s;
+   transform: translateX(60px);
+   /* transition: ; */
+}
+.action li:nth-child(2){
+    transition-delay:0.15s ;
+}
+.action li:nth-child(3){
+    transition-delay:0.3s ;
+}
+.card:hover .action li{
+    visibility: visible;
+
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
+.action li span{
+    position: absolute;
+    right: 50px;
+    top:20px;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    padding: 4px 6px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+.action li:hover{
+ background: rgb(129, 218, 173);
+}
+
+.action li:hover span{
+    transform: translateY(-50%) translateX(0px);
+    opacity: 1;
+}
+
+
+.action li span::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: red;
+    transform: translateY(-50%) rotate(45deg);
+
+}
+
+
+.action li span
+
+.navbar{
+    z-index: 1;
+    height: 12vh;
+    background: linear-gradient(rgb(34, 32, 32),rgb(113, 113, 114),rgb(243, 243, 250));
+}
+
+.navbar-nav{
+    z-index: 1;
+}
+
+#search{
+    border: 1px solid rgb(192, 189, 189);
+    border-style:initial;
+    background-color: white;
+    border-radius: 40px;
+    padding: 0.5vh;
+    padding-left: 1vh;
+    padding-right: 0.1vh;
+    width: 65%;
+}
+.modal-content{
+    border: none;
+    background: transparent;
+}
+
+
+#search > img {
+ margin: 0.1%;   
+}
+
+#search-input{
+outline: none;
+    border: none;
+    border-color: white;
+    width: 95%;
+    border-radius: 40px;
+    background-color: transparent;
+}
+
+.head{
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    width: 70%;
+    margin:auto;
+    z-index: 1;
+
+}
+.nav-item{
+    height: 100%;
+}
+.nav-link{
+    padding: 0;
+    height: 100%;
+}
+.nav li{
+   padding: 1vh;
+    width: 20%;
+
+}
+.nav li a{
+    text-decoration: none;
+    color:white;
+    height:100%;
+
+}
+.nav-item:hover{
+    background-color: rgb(132, 206, 132);
+}
+
+.nav-icon{
+    margin-left: 5%;
+}
+.nav-icon i{
+    cursor: pointer;
+    margin-right: 2vh;
+}
+
+.btn{
+    margin-left: 3vh;
+    border-radius: 20px;
+}
+
+
+/* doropdowns */
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    border-top: 3px solid red;
+    position: absolute;
+    background-color: #0a0a0a;
+    min-width: 160px;
+    margin-top: 0.5vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation: dropmove 0.2s linear;
+
+   
+    
+  }
+
+  @keyframes dropmove {
+      from {
+          margin-top: 3vh;
+
+      }
+      to{
+          margin-top: 1vh;
+      }
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+   
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .nav-item:hover .dropdown-content {display: block;
+   }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: transparent;}
+
+
+/* main section css */
+
+.section-main{
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    padding: 3vh;
+}
+
+
+
+
+.sright{
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    height: 100%;
+    margin: auto;
+    padding: 6vh;
+}
+.left{
+    justify-content: center;
+    text-align: center;
+    padding: auto;
+    margin: auto;
+    background: linear-gradient(rgb(128, 126, 126) , white);
+}
+
+.text , #pass, .loginbtn{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(158, 154, 154);
+    padding: 3vh;
+    margin: 1vh;
+    width: 100%;
+    color: black;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.posters{
+    height: 90vh;
+    display: grid;
+    grid-template-areas: 
+    'header header header menu menu main main'
+    'header header header menu menu main main'
+    'header header header menu menu main main'
+    'header header header footer footer right right'
+    'header header header footer footer right right'
+    'header header header footer footer right right';
+    grid-gap: 10px;
+    padding: 5px;
+    
+
+}
+
+
+.col-md-3{
+    margin-bottom: 2vh;
+}
+
+
+.categories > h2{
+    width: 60%;
+}
+.cat{
+    margin: 2vh;
+    cursor: pointer;
+}
+.posters > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.Active{
+    border-bottom: 2px solid reds;
+}
+
+.item1 {
+    background-image: url(https://preview.colorlib.com/theme/ashion/img/categories/category-1.jpg);}
+.item2{background-image: url(https://preview.colorlib.com/theme/ashion/img/categories/category-2.jpg);}
+.item3{background-image: url(https://preview.colorlib.com/theme/ashion/img/categories/category-5.jpg);}
+.item4{background-image: url(https://preview.colorlib.com/theme/ashion/img/categories/category-4.jpg);}
+.item5{background-image: url(/img/item5.png);}
+
+.posters > div > a{
+    visibility: hidden;
+    color: black;
+    text-align: left;
+    border-bottom: 10px solid red;
+    text-decoration: none;
+    
+}
+
+
+.item1:hover .i1{
+ 
+    border-bottom: 2px solid red;
+    visibility: visible;
+   
+}
+.item2:hover .i2{
+    visibility: visible;
+}
+.item3:hover .i3{
+    visibility: visible;
+}
+.item4:hover .i4{
+    visibility: visible;
+}
+.item5:hover .i5{
+    visibility: visible;
+}
+
+.newprod-categories{
+    position: absolute;
+    right: 10vh;
+}
+
+
+
+.card{
+    width: 100%;
+    height: 40vh;
+    background-color: transparent;
+    z-index: 0;
+    border: none;
+    margin-bottom: -8vh;
+    align-items: center;
+}
+
+
+.card img{
+    object-fit: contain;
+    height: 30vh;
+    width: 30vh;
+}
+
+
+.icons{
+    position: absolute;
+    bottom: 0vh;
+    width: 8vw;
+    visibility: hidden;
+    margin: auto;
+    background-color: rgb(197, 196, 196);
+
+}
+
+.icons svg{
+    margin: 1vh;
+    padding: 0.5vh;
+    cursor: pointer;
+}
+
+/* .card:hover .icons{
+    visibility: visible;
+animation: moveicons 0.3s linear;
+} */
+
+
+.details{
+   text-align: center;
+    height: 20vh;
+}
+
+.checked {
+
+    color: rgb(226, 152, 13);
+  }
+  .star img{
+    width: 20px;
+    height: 20px;
+  }
+
+@keyframes moveicons {
+    from{
+        width: 0vw;
+    }
+    to{
+    }
+}
+.col-cat{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.carousel-item > img{
+    height: 90vh;
+    width: 100%;
+}
+
+
+
+.trending-section{
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.trending-section > div{
+    width: 33.33%;
+    margin: 2vh;
+    padding: 2vh;
+   
+}
+
+.trending-section > div > h3{
+    width: 10vw;
+    border-bottom: 2px solid red;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.Trend-bestSeller-Featured-Card{
+    display: flex;
+    flex-direction: row;
+    width: 22vw;
+    height: 16vh;
+    margin-bottom: 5vh;
+    background-color: rgba(250, 250, 250, 0.411);
+    align-items: left;
+}
+
+.Trend-bestSeller-Featured-Card-image{
+    height: 20vh;
+    width: 20vh;
+    object-fit: contain;
+    margin-right: 2vh;
+}
+
+.Trend-bestSeller-Featured-Card > details > h6{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#demo {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+
+
+.timer{
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+}
+
+.left4{
+    width: 50%;
+    height: 60vh;
+
+}
+.left4 img{
+    width: 100%;
+    height: 100%;
+}
+
+.right3{
+    background-color: rgb(241, 241, 241);
+    justify-content: center;
+    width: 50%;
+}
+
+.right3 img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50px;
+}
+
+.services{
+    align-items: center;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+}
+.services-card{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 19%;
+}
+.services-card img{
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
+}
+
+.service-details{
+    margin: auto;
+}
+
+.offers{
+    height: 50vh;
+}
+.offers-templates{
+    margin: auto;
+}
+.offers-templates > div > img{
+    width: 80%;
+    height: 100%;
+
+}
+
+
+.foot{
+    height: 50vh;
+    /* align-items: center; */
+    text-align: center;
+}
+
+.foot > div{
+    width:25%;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.payops img{
+    object-fit: cover;
+    margin: 2vh;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    
+}
+
+
+.email{
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    height: 8vh;
+    width: 100%;
+    padding: 0.2vh;
+    border: 1px solid grey;
+}
+.email > input{
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 7vh;
+    border-radius: 30px;
+    padding: 1vh;
+}
+
+.email > button{
+    position: relative;
+    right: 1px;
+    height: 7vh;
+    border-radius: 40px;
+}
+
+
+
+.logos  > img{
+    object-fit: cover;
+    margin: auto;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.subs > input{
+    width: 12vw;
+    
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.item{
+    border: 1px solid rgba(214, 214, 214, 0.5);
+    margin: 2vh;
+}
+.qty{
+    margin: 2vh;
+}
+.qty button{
+   height: 4vh;
+   width: 4vh;
+   padding: 0.5%;
+   background-color: rgb(151, 151, 150);
+   border-radius: 5px;
+   border: 1px solid black;
+
+}
+.qty input{
+    width: 3vw;
+    border-radius: 10px;
+}
+@media screen and (max-width:600px) {
+    .posters > div{
+        background-size: cover;
+    }
+    .posters{
+        height: 200vh;
+        grid-template-areas: 
+        ' header header header '
+        ' main main main'
+        ' footer footer footer '
+        ' menu menu menu '
+        ' right right right '
+        ;
+    }
+
+    /* .row{
+        width: 50%;
+    } */
+    .row>* {
+        text-align: center;
+        width: 50%;
+    }
+    .carousel-item > img{
+        height: 35vh;
+    }
+    
+}
+
+@media screen and (max-width:900px) {
+    .trending-section{
+        flex-direction: column;
+        height: 263vh;
+    }
+    .trending-section > div{
+        width: 100%;
+    }
+    
+    .Trend-bestSeller-Featured-Card{
+        width: 100%;
+        height: 20vh;
+    }
+    .foot{
+        flex-direction: column;
+    }
+    .foot > div{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 5vh;
+
+    }
+    .subs > input{
+        width: 65vw;
+    }
+    
+}
+
+@media screen and (max-width:660px) {
+    .section-main{
+        flex-direction: column;
+    }
+    .categories{
+        text-align: center;
+        height: 12vh;
+    }
+    /* .newprod-categories {
+        text-align: center;
+        
+    } */
+     .categories > h2{
+           width: 100%;
+     }
+    
+    .right,.sright,.left{
+        width: 80%;
+        height: 150%;
+    }
+    #navbarSupportedContent
+{
+    background-color: rgb(233, 233, 233);
+    padding: 1vh;
+}
+
+.ad{
+    height: 195vh;
+}
+}
+@media screen and (max-width:480px) {
+    .timer{
+        display: flex;
+        flex-direction: column;
+    }
+    .left4{
+        width: 100%;
+    }
+    .right3{
+        width: 100%;
+    }
+    .card{
+        height: 39vh;
+    }
+    .services{
+        height: 112vh;
+        flex-direction: column;
+    }
+    .services-card{
+       align-items: center;
+        width: 60%;
+        flex-direction: column;
+    }
+    .timer{
+        height: 108vh;
+    }
+    .nav{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav > li{
+        width: 25%;
+    }
+   
+    .qty{
+        width: 16vh;
+    }
+    .qty input{
+        width: 6vw;
+    }
+    .qty button{
+        width: 5vh;
+        height: 7vh;
+    }
+    .trend-bestseller-featured-card-image{
+        object-fit: contain;
+        width: 50%;
+    }
+    .details{
+        width: 20vh;
+    }
+    .cartitems{
+        width: 84vw;
+    }
+    .right{
+        width: 107%;
+    }
+    .item{
+        margin:-1vh;
+    }
+    .cat{
+        font-size: 11px;
+    margin: 0.5vh;
+    }
+    .trending-section > div {
+        margin:0;
+    }
+    .card img {
+        height: 30vh;
+        width: 23vh;
+    }
+    .trending-section > div > h3{
+        width: 29vw;
+    }
+   
+    .carousel-control-next,.carousel-control-prev{
+        height: 82%;
+    }
+    .offers{
+        height: 357vh;
+    }
+    .service-details{
+        margin: auto;
+    }
+    .services-card{
+        text-align: center;
+        width: 80%;
+    }
+}
+@media screen and (max-width:660px) {
+   
+
+    .right,.sright,.left{
+        width: 100%;
+        height: 150%;
+    }
+    #navbarSupportedContent
+{
+    background-color: rgb(10, 10, 10);
+    padding: 1vh;
+}
+}
+
+
+
+@media screen and (max-width:360px) {
+    .row>* {
+        width: 100%;
+    }
+   .trending-section > div > h3{
+        width: 29vw;
+    }
+    .ad{
+        height: 340vh;
+    }
+    .qty{
+        width: 16vh;
+    }
+    .qty input{
+        width: 6vw;
+    }
+    .qty button{
+        width: 5vh;
+        height: 7vh;
+    }
+
+    .Trend-bestSeller-Featured-Card-image{
+        /* width: 30%; */
+        object-fit: cover;
+    }
+    .details{
+        text-align: center;
+        width: 21vh;
+        margin: auto;
+    }
+    .cartitems{
+        width: 84vw;
+    }
+    .right{
+        width: 107%;
+    }
+    .item{
+        margin:-1vh;
+    }
+    .service-details{
+        text-align: center;
+        margin: auto;
+        width: 20vh;
+    }
+}
+
+
+
+
