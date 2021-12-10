@@ -497,7 +497,7 @@ z-index: 1; */
 
 .posters > div > a{
     position: relative;
-    left: 4px;
+    left: 2px;
     top: 10%;
     font-size: 0px;
     visibility: visible;
