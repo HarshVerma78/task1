@@ -1113,7 +1113,7 @@ animation: moveicons 0.3s linear;
 
 @media screen and (max-width:330px) {
 .offers{
-    height: 270vh;
+    height: 300vh;
 }
 }
 
