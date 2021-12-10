@@ -62,6 +62,13 @@ z-index: 1; */
     /* z-index: 1; */
 
 }
+.login-modal > input{
+    outline: none;
+   
+}
+.login-modal{
+    width: 80%;
+}
 
 .nav-item {
     height: 100%;
@@ -204,21 +211,13 @@ z-index: 1; */
     }
 
 }
-/* 
-.head{
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    height: 6vh;
-    background-color: black;
-} */
+
 
 .action
 {
     position: absolute;
     top:10px;
     right:65px;
-    /* visibility: hidden; */
 }
 span {cursor:pointer; }
 .number{
@@ -297,151 +296,12 @@ span {cursor:pointer; }
 
 .action li span
 
-/* .navbar{
-    z-index: 1;
-    height: 12vh;
-    background: linear-gradient(rgb(34, 32, 32),rgb(113, 113, 114),rgb(243, 243, 250));
-}
 
-.navbar-nav{
-    z-index: 1;
-}
-
-#search{
-    border: 1px solid rgb(192, 189, 189);
-    border-style:initial;
-    background-color: white;
-    border-radius: 40px;
-    padding: 0.5vh;
-    padding-left: 1vh;
-    padding-right: 0.1vh;
-    width: 65%;
-} */
 .modal-content{
     border: none;
     background: transparent;
 }
 
-/* 
-#search > img {
- margin: 0.1%;   
-}
-
-#search-input{
-outline: none;
-    border: none;
-    border-color: white;
-    width: 95%;
-    border-radius: 40px;
-    background-color: transparent;
-}
-
-.head{
-    align-items: center;
-    justify-content: center;
-}
-.nav{
-    width: 70%;
-    margin:auto;
-    z-index: 1;
-
-} */
-/* .nav-item{
-    height: 100%;
-}
-.nav-link{
-    padding: 0;
-    height: 100%;
-}
-.nav li{
-   padding: 1vh;
-    width: 20%;
-
-}
-.nav li a{
-    text-decoration: none;
-    color:white;
-    height:100%;
-
-}
-.nav-item:hover{
-    background-color: rgb(132, 206, 132);
-} */
-
-/* .nav-icon{
-    margin-left: 5%;
-}
-.nav-icon i{
-    cursor: pointer;
-    margin-right: 2vh;
-}
-
-.btn{
-    margin-left: 3vh;
-    border-radius: 20px;
-} */
-
-
-/* doropdowns */
-
-/* Dropdown Button
-.dropbtn {
-    background-color: transparent;
-    color: black;
-    border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  /* .dropdown {
-    position: relative;
-    display: inline-block;
-
-  } */
-  
-  /* Dropdown Content (Hidden by Default) */
-  /* .dropdown-content {
-    display: none;
-    border-top: 3px solid red;
-    position: absolute;
-    background-color: #0a0a0a;
-    min-width: 160px;
-    margin-top: 0.5vh;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    animation: dropmove 0.2s linear;
-
-   
-    
-  }
-
-  @keyframes dropmove {
-      from {
-          margin-top: 3vh;
-
-      }
-      to{
-          margin-top: 1vh;
-      }
-  }
-  
-  /* Links inside the dropdown */
-  /* .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-   
-  } */
-  
-  /* Change color of dropdown links on hover */
-  /* .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  /* .nav-item:hover .dropdown-content {display: block;
-   } */
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  /* .dropdown:hover .dropbtn {background-color: transparent;} */ 
 
 
 /* main section css */
@@ -456,12 +316,15 @@ outline: none;
 
 
 
-.sright{
-    width: 100%;
-    background-color: rgb(235, 235, 235);
-    height: 100%;
+.signup-card{
+    width: 75%;
+    background-color:transparent;
+    height: 70%;
     margin: auto;
     padding: 6vh;
+}
+.form > form > input{
+    outline: none;
 }
 .left{
     justify-content: center;
@@ -999,8 +862,8 @@ animation: moveicons 0.3s linear;
     .cartitems{
         width: 84vw;
     }
-    .right{
-        width: 107%;
+    .login-card{
+        width: 93%;
     }
     .item{
         margin:-1vh;
@@ -1083,8 +946,8 @@ animation: moveicons 0.3s linear;
     .cartitems{
         width: 84vw;
     }
-    .right{
-        width: 107%;
+    .login-card{
+        width: 93%;
     }
     .item{
         margin:-1vh;
