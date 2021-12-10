@@ -8,11 +8,11 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    crossorigin="anonymous" />
   <!-- <link rel="stylesheet" href="http://127.0.0.1:5500/assets/css/bootstrap-5.0.2-dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- CSS only -->
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
@@ -25,41 +25,117 @@
 
   <!-- Navbar start -->
 
-
-  <nav class="navbar shadow-lg navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Estore</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-
-        <form action="/" id="search" class="d-flex">
-          <input type="search" id="search-input" placeholder="search">
-          <img src="./img/search.png" width="30" height="30" alt="">
+  <header class="head bg-primary">
+    <nav class="navbar text-light ">
+        <p class="fas fa-bars mx-2 my-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            aria-controls="offcanvasExample"></p>
+        <h2 class="text-light">Estore</h2>
+        <form action="" class=" text-dark search">
+            <input type="search" id="search-input" placeholder="search">
+            <i class="fa fa-search "></i>
         </form>
+        <i class="fa fa-heart"></i>
+        <i class="fa fa-shopping-cart">
+            <span class="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-success"
+                style="width: 20px; height: 20px; font-size: 12px;">
+                2
 
-        <div class="nav-icon">
-          <i class="fa fa-heart fa-lg" aria-hidden="true" style="color: white;"></i>
-          <i data-bs-toggle="modal" data-bs-target="#exampleModalcart"
-            class="fa fa-shopping-cart fa-lg position-relative" aria-hidden="true" style="color: white;">
+            </span></i>
+        <i class="fa fa-user"  data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+    </nav>
+    <form action="" class=" text-dark search2">
+        <input type="search" id="search-input" placeholder="search">
+        <i class="fa fa-search "></i>
+    </form>
 
-            <span class="position-absolute top-0 start-10 translate-middle badge rounded-pill bg-success"
-              style="width: 20px; height: 20px; font-size: 12px;">
-              2
 
-            </span>
-          </i>
-          <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+
+
+    <!-- sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><i class="fa fa-user px-2"> Profile </i></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fas fa-home mx-2"></i> Home</li>
+                <li class="list-group-item"><i class="far fa-address-card mx-2"></i> About Us</li>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            <i class="fas fa-th-list mx-2"></i> Categories
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">All</li>
+                                <li class="list-group-item">Mens</li>
+                                <li class="list-group-item">Womens</li>
+                                <li class="list-group-item">Kids</li>
+                                <li class="list-group-item">Cosmetics</li>
+                              </ul>
+                        </div>
+                      </div>
+                    </div>
+               
+                  </div>
+                <li class="list-group-item"><i class="far fa-address-book mx-2"></i> Contact Us</li>
+                <li class="list-group-item"><i class="fas fa-cog mx-2"></i> Settings</li>
+              </ul>
+            
+        </div>
+    </div>
+
+
+
+
+
+</header>
+      
+<div class="navbar2 bg-primary">
+<ul class="nav text-center ">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">
+      <div class="dropdown">
+        <button class="dropbtn text-light">Category</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
       </div>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"><a class="nav-link" href="#">
+        <div class="dropdown">
+          <button class="dropbtn text-light">Latest</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link">Contact Us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link">Settings</a>
+  </li>
+</ul>
+</div>
 
-    </div>
-  </nav>
 
-
-  <!-- cart modal -->
 
 
 
@@ -70,7 +146,7 @@
 
         <div class="modal-body">
 
-          <div class="right">
+          <div class="login-card">
 
             <div class="form">
               <div class="caritems container">
@@ -114,10 +190,10 @@
       <div class="modal-content">
 
         <div class="modal-body">
-          <div class="right">
+          <div class="login-card">
             <div class="form">
               <h4>Welcome back ! <br> Please Sign In now </h4>
-              <form action="/">
+              <formn class="login-modal" action="/">
                 <input type="text" class="text" placeholder="Username">
                 <input type="password" id="pass" placeholder="Password">
                 <div class="mb-3 form-check">
@@ -135,13 +211,13 @@
     </div>
   </div>
   <!--signup Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <div class="modal fade" id="staticBackdrop"  data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
 
         <div class="modal-body">
-          <div class="sright">
+          <div class="signup-card">
             <div class="form">
               <h4>Welcome back ! <br> Please Sign Up now </h4>
               <form action="/">
@@ -164,7 +240,7 @@
     </div>
   </div>
 
-  <header class="head shadow-lg ">
+  <!-- <header class="head shadow-lg ">
     <ul class="nav text-center ">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
@@ -197,7 +273,7 @@
         <a class="nav-link">Contact Us</a>
       </li>
     </ul>
-  </header>
+  </header> -->
 
   <!-- navbar ends -->
 
